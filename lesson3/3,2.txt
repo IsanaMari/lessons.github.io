@@ -1,0 +1,70 @@
+var obj1 = {
+        name: 'Zhanna',
+        registered: true,
+        data: '28.10.95',
+        getInfo: function (){userInfo(this)}
+    };
+    var obj2 = {
+        name: 'Dasha',
+        registered: false,
+        data: '10.08.17',
+        getInfo: function (){userInfo(this)}
+    };
+    function userInfo(object) {
+        return object.registered
+            ? console.log('Дата регистрации:' + object.data)
+            : console.log('Незарегистрированный пользователь' + object.name);
+    }
+console.log(obj1.getInfo())
+
+-----------------------------------
+var obj1 = {
+        name: 'Zhanna',
+        registered: true,
+        data: '28.10.95'
+    };
+    var obj2 = {
+        name: 'Dasha',
+        registered: false,
+        data: '10.08.17'
+    };
+    var arr = [obj1, obj2];
+    function userInfo(object) {
+        return object.registered
+            ? console.log('Дата регистрации:' + object.data)
+            : console.log('Незарегистрированный пользователь ' + object.name);
+    }
+    arr.map(function (obj) {
+        return Object.defineProperty(obj, 'getInfo', {
+            value: function () {
+                userInfo(this)
+            }
+        });
+    })
+
+    console.log(obj2.getInfo())
+
+--------------------------------------
+var obj1 = {
+        name: 'Zhanna',
+        registered: true,
+        data: '28.10.95'
+    };
+    var obj2 = {
+        name: 'Dasha',
+        registered: false,
+        data: '10.08.17'
+    };
+    var arr = [obj1, obj2];
+    function userInfo(object) {
+        return object.registered
+            ? console.log('Дата регистрации:' + object.data)
+            : console.log('Незарегистрированный пользователь ' + object.name);
+    }
+    
+    Object.defineProperty(obj1, 'getInfo', {
+        value: function () {
+            userInfo(this)
+        }
+    });
+    console.log(obj1.getInfo())
