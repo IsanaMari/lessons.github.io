@@ -21,45 +21,6 @@
     <div class="col-md-12">
       <a href="../index.html"><span>&laquo;</span>Back</a>
     </div>
-    <div class="col-md-6">
-      <p>Задача 1</p>
-      <xmp>
-        function testArguments() {
-          for (var i = 0; i < arguments.length; i++) {
-            console.log(`[ ${ ( i + " ]" ) } ${ arguments [i] }`)
-          }
-          console.log(arguments.callee);
-        }
-        testArguments(10, false, 'google');
-      </xmp>
-    </div>
-    <div class="col-md-6">
-      <p>Задача 2</p>
-      <xmp>
-        var obj1 = {
-          name: 'Zhanna',
-          registered: true,
-          data: '28.10.95',
-          getInfo: function (){userInfo(this)}
-        };
-        var obj2 = {
-          name: 'Dasha',
-          registered: false,
-          data: '10.08.17',
-          getInfo: function (){userInfo(this)}
-        };
-        function userInfo(object) {
-          return object.registered
-            ? console.log('Дата регистрации:' + object.data)
-            : console.log('Незарегистрированный пользователь' + object.name);
-        }
-        console.log(obj1.getInfo());
-      </xmp>
-    </div>
-    <div class="col-md-6">
-      <p>Задача 3</p>
-
-    </div>
   </div>
 </div>
 
@@ -75,7 +36,7 @@
         integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
         crossorigin="anonymous"></script>
 <!-- scripts -->
-<script src="third.js"></script>
+<script src="fourth.js"></script>
 </body>
 
 </html>

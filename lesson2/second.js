@@ -14,11 +14,7 @@ function stringToArray() {
 function checkInputType(value) {
   var now = new Date();
   var localDate = now.toLocaleString();
-  if (isNaN(value)) {
-    console.log('Неверный тип данных');
-  } else {
-    console.log('Задача 2: ' + localDate);
-  }
+  isNaN(value) ? console.log('Неверный тип данных') : console.log('Задача 2: ' + localDate);
 }
 var reg = /<[^>]*>/g;
 function testUserText(userText) {

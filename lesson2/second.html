@@ -39,39 +39,34 @@
     </div>
     <div class="col-md-6">
       <p>Задача 2</p>
-      <pre>
+      <xmp>
         function checkInputType(value) {
           var now = new Date();
           var localDate = now.toLocaleString();
-          if (isNaN(value)) {
-            console.log('Неверный тип данных');
-          } else {
-            console.log(localDate);
-          }
+          isNaN(value) ? console.log('Неверный тип данных') : console.log('Задача 2: ' + localDate);
         }
         checkInputType(50);
-      </pre>
+      </xmp>
     </div>
     <div class="col-md-6">
       <p>Задача 3</p>
       <xmp>
         var reg = /<[^>]*>/g;
         function testUserText(userText) {
-        return userText.match(reg) ? '' : userText
+          return userText.match(reg) ? '' : userText
         }
         function insertUserText(userText) {
-        var x = document.createElement('div');
-        x.innerHTML = testUserText(userText);
-        document.body.appendChild(x);
+          var x = document.createElement('div');
+          x.innerHTML = testUserText(userText);
+          document.body.appendChild(x);
         }
-
         insertUserText(`<svg/onload='document.write("Looser");
-        document.body.style.backgroundColor="black";
-        document.body.style.color="red";
-        document.body.style.fontSize="50px";
-        document.body.style.fontWeight="bold";
-        document.body.style.textAlign="center";
-        document.body.style.paddingTop="45%";'>`);
+          document.body.style.backgroundColor="black";
+          document.body.style.color="red";
+          document.body.style.fontSize="50px";
+          document.body.style.fontWeight="bold";
+          document.body.style.textAlign="center";
+          document.body.style.paddingTop="45%";'>`);
         insertUserText('hello world');
       </xmp>
       <p><-ответ</p>
