@@ -93,13 +93,13 @@ function getCurrentPostComments(postId) {
     var value = comments[x];
     keys.push(value);
   }
-  var usa = keys.filter(function (x, index, arr) {
+  var post = keys.filter(function (x, index, arr) {
     arr.push(index);
     return x.postId === postId
   });
 
 
-  return usa;
+  return post;
 }
 
 console.log(getCurrentPostComments(7891451));
