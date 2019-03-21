@@ -87,14 +87,19 @@ var comments = {
                         or null if the element is not in a namespace`
   }
 };
-
 function getCurrentPostComments(postId) {
-  // var res = [];
-  for (var i = 0; i < comments.length; i++) {
-    var res = comments[i]
+  var keys = [];
+  for (var x in comments) {
+    var value = comments[x];
+    keys.push(value);
   }
+  var usa = keys.filter(function (x, index, arr) {
+    arr.push(index);
+    return x.postId === postId
+  });
 
-  return res
+
+  return usa;
 }
 
 console.log(getCurrentPostComments(7891451));
