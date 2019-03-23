@@ -30,8 +30,10 @@ function second() {
             value: '#',
             content: 'Link',
             style: 'height: 50px; width: 50px; background-color: #ff5500; display:block; margin-bottom:10px;',
-            event: (function () {
-            })()
+            eventValue: 'click',
+            eventFunction: function () {
+                userInfo(this)
+            }
         },
         {
             tag: 'p',
@@ -65,7 +67,13 @@ function second() {
     var styles = '';
     var classes = '';
 
+
     for (x in tags) {
+        function userInfo(object) {
+            return tags[x].eventValue
+            console.log(tags[x].eventValue)
+        }
+
         element = tags[x].tag;
         classes = tags[x].class;
         var elements = second_task.appendChild(document.createElement(element));

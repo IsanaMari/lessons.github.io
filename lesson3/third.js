@@ -98,7 +98,6 @@ function getCurrentPostComments(postId) {
     return x.postId === postId
   });
 
-
   return post;
 }
 
