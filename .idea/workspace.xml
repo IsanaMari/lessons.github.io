@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0bc42e36-a00b-45e0-8e73-3606008d4b62" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson3/third.js" beforeDir="false" afterPath="$PROJECT_DIR$/lesson3/third.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson6/sixth.js" beforeDir="false" afterPath="$PROJECT_DIR$/lesson6/sixth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson5/fifth.html" beforeDir="false" afterPath="$PROJECT_DIR$/lesson5/fifth.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson7/seventh.html" beforeDir="false" afterPath="$PROJECT_DIR$/lesson7/seventh.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson7/seventh.js" beforeDir="false" afterPath="$PROJECT_DIR$/lesson7/seventh.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,19 +15,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/lesson7/seventh.js">
+        <entry file="file://$PROJECT_DIR$/lesson5/fifth.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="24" column="14" lean-forward="true" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lesson7/seventh.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="23" column="39" selection-start-line="23" selection-start-column="39" selection-end-line="23" selection-end-column="39" />
+            <state relative-caret-position="340">
+              <caret line="20" column="31" lean-forward="true" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -38,7 +29,11 @@
     <findStrings>
       <find>All Lessons</find>
       <find>7891451</find>
+      <find>elemData</find>
     </findStrings>
+    <replaceStrings>
+      <replace>collection</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -61,6 +56,7 @@
         <option value="$PROJECT_DIR$/lesson6/sixth.js" />
         <option value="$PROJECT_DIR$/lesson7/seventh.html" />
         <option value="$PROJECT_DIR$/lesson7/seventh.js" />
+        <option value="$PROJECT_DIR$/lesson5/fifth.html" />
       </list>
     </option>
   </component>
@@ -97,7 +93,7 @@
             <path>
               <item name="lessons.github.io" type="b2602c69:ProjectViewProjectNode" />
               <item name="lessons.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="lesson6" type="462c0819:PsiDirectoryNode" />
+              <item name="lesson5" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="lessons.github.io" type="b2602c69:ProjectViewProjectNode" />
@@ -149,12 +145,12 @@
       <workItem from="1553068311124" duration="7030000" />
       <workItem from="1553159029520" duration="15484000" />
       <workItem from="1553242196714" duration="8056000" />
-      <workItem from="1553337264805" duration="16822000" />
+      <workItem from="1553337264805" duration="27239000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="55449000" />
+    <option name="totallyTimeSpent" value="65866000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1386" height="788" extended-state="0" />
@@ -270,24 +266,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lesson7/seventh.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="39" selection-start-line="23" selection-start-column="39" selection-end-line="23" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lesson6/sixth.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-595">
+        <state relative-caret-position="-872">
           <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lesson7/seventh.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="14" lean-forward="true" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
+        <state relative-caret-position="386">
+          <caret line="39" column="4" lean-forward="true" selection-start-line="39" selection-start-column="4" selection-end-line="39" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lesson7/seventh.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="29" column="14" lean-forward="true" selection-end-line="48" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lesson5/fifth.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="31" lean-forward="true" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
         </state>
       </provider>
     </entry>
