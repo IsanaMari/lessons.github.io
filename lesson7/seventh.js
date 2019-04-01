@@ -1,96 +1,92 @@
 function imageAppear() {
-  var first = document.getElementById('first');
-  var p = first.appendChild(document.createElement('p'));
-  p.innerText = 'Click me';
-  p.addEventListener('click', function (event) {
-    var img = first.appendChild(document.createElement('img'));
-    img.setAttribute('src', 'https://picsum.photos/200/200/?random');
-    img.style = `
+    var first = document.getElementById('first');
+    var p = first.appendChild(document.createElement('p'));
+    p.innerText = 'Click me';
+    p.addEventListener('click', function (event) {
+        var img = first.appendChild(document.createElement('img'));
+        img.setAttribute('src', 'https://picsum.photos/200/200/?random');
+        img.style = `
             height: 100px;
             width: 100px;
         `;
-    img.addEventListener('mouseover', function (event) {
-      img.style = `
+        img.addEventListener('mouseover', function (event) {
+            img.style = `
             transition: all 1s;
             height: 200px;
             width: 200px;
         `
+        });
+        img.addEventListener('click', function (event) {
+            img.remove();
+        })
     });
-    img.addEventListener('click', function (event) {
-      img.remove();
-    })
-  });
 
 }
 
 imageAppear();
 
 /*Second*/
-var collection = [
-  {
-    name: 'div',
-    attrs: {
-      title: 'container',
-      style: `
-                background-color: #ff0066;
-                border: dotted 2px #ff0000;
-                border-radius: 50%;
-            `
-    }
-  },
-  {
-    name: 'p',
-    attrs: {
-      title: 'container',
-      style: `
-                background-color: #ff0066;
-                border: dotted 2px #ff0000;
-                border-radius: 50%;
-            `
-    }
-  },
-  {
-    name: 'span',
-    attrs: {
-      title: 'container',
-      style: `
-                background-color: #ff0066;
-                border: dotted 2px #ff0000;
-                border-radius: 50%;
-            `
-    }
-  },
-  {
-    name: 'a',
-    attrs: {
-      title: 'container',
-      style: `
-                background-color: #ff0066;
-                border: dotted 2px #ff0000;
-                border-radius: 50%;
-            `
-    }
-  }
-];
-var second = document.getElementById('second');
+// var collection = [];
 //
-// function over ( event ) {
-// ...
+// function over(event) {
+//     event.target.style.backgroundColor = '#ffff0050'
 // }
-// function out ( event ) {
-// ...
+// function out(event) {
+//     event.target.style.backgroundColor = '#ff00ff50'
 // }
-// function clickHandler ( event ) {
-// ...
+// function clickHandler(event) {
+//     event.target.remove()
 // }
-var el = [];
-["first", "second", "third", "fourth"].forEach(
-  function (tag, index, arr) {
-    let j = document.getElementsByTagName('body')[0];
-    for (let ind = 0; ind < index; ind++) {
-      j = j.firstChild
+// var second = document.getElementById('second');
+// ["first", "second", "third", "fourth"].forEach(
+//     function (tag, index, arr) {
+//
+//         var x = (index ? collection[index - 1] : second).appendChild(
+//             document.createElement('div')
+//         );
+//         collection.push(x);
+//         x.style = `
+//       width: ${400 - index * 50}px;
+//       height: ${400 - index * 50}px;
+//       background-color: #ff00ff50;
+//       border: dotted 1px yellow;
+//     `;
+//         x.title = tag;
+//         x.onmouseover = over;
+//         x.onmouseout = out;
+//         x.onclick = clickHandler
+//     }
+// );
+
+/*third*/
+var collection = []
+
+function over(event) {
+    event.target.style.backgroundColor = '#ffff0050'
+}
+function out(event) {
+    event.target.style.backgroundColor = '#ff00ff50'
+}
+function clickHandler(event) {
+    console.log()
+}
+
+[1, 2, 3, 4, 5, 6, 7].forEach(
+    function (tag, index, arr) {
+
+        var x = (index ? collection[index - 1] : second).appendChild(
+            document.createElement('div')
+        );
+        collection.push(x);
+        x.style = `
+      width: ${400 - index * 50}px;
+      height: ${400 - index * 50}px;
+      background-color: #ff00ff50;
+      border: dotted 1px yellow;
+    `;
+        x.title = tag;
+        x.onmouseover = over;
+        x.onmouseout = out;
+        x.onclick = clickHandler
     }
-    j.prepend(document.createElement(collection[index].name));
-    j = document.getElementsByTagName('body')[0];
-  }
 )
