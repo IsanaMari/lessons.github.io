@@ -88,19 +88,19 @@ var comments = {
   }
 };
 function getCurrentPostComments(postId) {
-  var keys = [];
-  for (var x in comments) {
-    var value = comments[x];
-    keys.push(value);
+  var arr = [];
+  for (obj in comments) {
+    var postIdKey = comments[obj].postId;
+    if (postIdKey === postId) {
+      var a = {};
+      a.author = comments[obj].author;
+      a.text = comments[obj].text;
+      arr.push(a);
+    }
   }
-  var post = keys.filter(function (x, index, arr) {
-    arr.push(index);
-    return x.postId === postId
-  });
-
-  return post;
+  return arr;
 }
 
+testArguments(10, false, 'google');
+userInfo(obj1);
 console.log(getCurrentPostComments(7891451));
-// testArguments(10, false, 'google');
-// console.log(obj1.getInfo());
