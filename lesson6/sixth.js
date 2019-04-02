@@ -92,7 +92,7 @@ function addBackColor() {
   for (x in elems) {
     var newElem = elems[x];
     console.log(newElem);
-    newElem.tagName !== 'SCRIPT' ? newElem.className += ' redBack' : null;
+    newElem.tagName !== 'SCRIPT' ? newElem.classList += ' redBack' : null;
   }
 }
 

@@ -1,7 +1,7 @@
 /*First*/
 function typeMessage(message, velocity) {
-  var container = document.getElementById("demo") ?
-    document.getElementById("demo") :
+  var container = document.getElementById("first") ?
+    document.getElementById("first") :
     document.body.appendChild(
       document.createElement("h3")
     );

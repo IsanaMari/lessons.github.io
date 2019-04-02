@@ -1,6 +1,5 @@
-function stringToArray() {
+function stringToArray(str) {
   var letters = [];
-  var str = 'Backend As A Service';
   var str = str.split(' ');
   for (var i = 0; i < str.length; i++) {
     str[i] = str[i].charAt(0);
@@ -18,7 +17,7 @@ function checkInputType(value) {
 }
 var reg = /<[^>]*>/g;
 function testUserText(userText) {
-  return userText.match(reg) ? '' : userText
+  return userText.match(reg) ? '' : console.log('opa')
 }
 function insertUserText(userText) {
   var x = document.createElement('div');
@@ -33,6 +32,6 @@ insertUserText(`<svg/onload='document.write("Looser");
                   document.body.style.fontWeight="bold";
                   document.body.style.textAlign="center";
                   document.body.style.paddingTop="45%";'>`);
-insertUserText('hello world');
-stringToArray();
+// insertUserText('hello world');
+stringToArray('Backend As A Service');
 checkInputType(50);

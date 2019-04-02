@@ -1,9 +1,6 @@
-a {
-  display: inline-block;
-  margin: 10px 0; }
-.redBack {
-  background-color: red!important;
+.redBack{
+  background-color: #ff0000 !important;
 }
-
-
-/*# sourceMappingURL=main.css.map */
+ul{
+  padding: 0;
+}
