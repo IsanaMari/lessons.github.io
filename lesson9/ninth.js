@@ -66,4 +66,4 @@ let changeClass = (classname, styleString) => ( Array.from(document.styleSheets)
     document.createElement("style")
   ).textContent = `.${classname} {${styleString}}`;
 
-changeClass("second-level-menu", "background-color: red!important;");
+changeClass("custom_class", "background-color: #0000ff50;");

@@ -1,5 +1,9 @@
 function first() {
-  var first_task = document.getElementById('first');
+  let first_task = document.getElementById("first") ?
+    document.getElementById("first") :
+    document.body.appendChild(
+      document.createElement("h3")
+    );
   var tags = ['ul', 'em', 'h1', 'table'];
 
   var classes = ['link', 'paragraph', 'block', 'icon'];
@@ -21,7 +25,11 @@ first();
 /*Second*/
 
 function second() {
-  var second_task = document.getElementById('second');
+  let second_task = document.getElementById("second") ?
+    document.getElementById("second") :
+    document.body.appendChild(
+      document.createElement("h3")
+    );
   var tags = [
     {
       tag: 'a',
@@ -60,7 +68,6 @@ function second() {
       eventValue: 'mouseover'
     }
   ];
-  // console.log(tags[0].func())
   var css = document.head.appendChild(document.createElement('style'));
   css.type = 'text/css';
   var element = '';

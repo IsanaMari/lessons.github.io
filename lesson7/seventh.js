@@ -1,7 +1,16 @@
 function imageAppear() {
-  var first = document.getElementById('first');
+  let first = document.getElementById("first") ?
+    document.getElementById("first") :
+    document.body.appendChild(
+      document.createElement("h3")
+    );
   var p = first.appendChild(document.createElement('p'));
   p.innerText = 'Click me';
+  p.style = `
+    border: 1px solid #ff0000;
+    width: 100px;
+    cursor: pointer;
+  `;
   p.addEventListener('click', function (event) {
     var img = first.appendChild(document.createElement('img'));
     img.setAttribute('src', 'https://picsum.photos/200/200/?random');
@@ -37,7 +46,11 @@ function out(event) {
 function clickHandler(event) {
     event.target.remove()
 }
-var second = document.getElementById('second');
+let second = document.getElementById("second") ?
+  document.getElementById("second") :
+  document.body.appendChild(
+    document.createElement("h3")
+  );
 ["first", "second", "third", "fourth"].forEach(
     function (tag, index, arr) {
 
@@ -70,7 +83,11 @@ function mouseOut(event) {
 function clickHandlerEvent(event) {
   event.target.innerHTML = '';
 }
-var third = document.getElementById('third');
+let third = document.getElementById("third") ?
+  document.getElementById("third") :
+  document.body.appendChild(
+    document.createElement("h3")
+  );
 [1, 2, 3, 4, 5, 6, 7].forEach(
   function (tag, index, arr) {
 
