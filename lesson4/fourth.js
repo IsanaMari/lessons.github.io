@@ -1,52 +1,52 @@
-var womenBag = {
-    passport: 'passport',
-    keys: 'keys',
-    usefulThing: 'garbage',
-    garbage: 'thomething',
-    deleteItem: function (item) {
-        delete this[item]
-    },
-    addItem: function (item, val) {
+var bag = {
+    cosmeticBag: 'blue',
+    hairbrush: 'red',
+    password: 1,
+    cookies: 10,
+    addItem(item, val) {
         this[item] = val
+    },
+    removeItem(item) {
+        delete this[item]
     }
-}
+};
 
 // second
 function LibraryBook(_title = 'Some interesting book', _year = 'No info', _author = 'No info') {
-    var title = _title
-    var year = _year
-    var author = _author
-    var readerName = null
-    var readerData = null
+    var title = _title;
+    var year = _year;
+    var author = _author;
+    var readerName = null;
+    var readerData = null;
     var giveTheBook = function (client, data = new Date().toLocaleString()) {
-        readerName = client
+        readerName = client;
         readerData = data
-    }
+    };
     this.getBookInfo = function () {
-        var text = readerName ? 'Already taken' : 'You can take it'
+        var text = readerName ? 'Already taken' : 'You can take it';
         console.info(`${author}, ${title} (${year}): ${text}`)
-    }
+    };
     this.getTheBook = function (client, data) {
         if (readerName) {
-            this.getBookInfo()
+            this.getBookInfo();
             return null
         } else {
-            giveTheBook(client, data)
+            giveTheBook(client, data);
             return {
                 title: title,
                 year: year,
                 author: author
             }
         }
-    }
+    };
     this.returnBook = function () {
-        readerName = null
+        readerName = null;
         readerData = null
     }
 }
 
-var book = new LibraryBook('World of Warcraft', '2016', 'William King')
-book.getTheBook('John Doe', new Date(2018, 6, 25))
+var book = new LibraryBook('World of Warcraft', '2016', 'William King');
+book.getTheBook('John Doe', new Date(2018, 6, 25));
 
 // third
 function Constr() {
@@ -55,5 +55,5 @@ function Constr() {
     }
 }
 
-var test = new Constr()
-test.addProperty('fruit', 'strawberry')
+var test = new Constr();
+test.addProperty('fruit', 'strawberry');
