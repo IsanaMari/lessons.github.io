@@ -1,4 +1,4 @@
-var bag = {
+let bag = {
     cosmeticBag: 'blue',
     hairbrush: 'red',
     password: 1,
@@ -12,18 +12,19 @@ var bag = {
 };
 
 // second
-function LibraryBook(_title = 'Some interesting book', _year = 'No info', _author = 'No info') {
-    var title = _title;
-    var year = _year;
-    var author = _author;
-    var readerName = null;
-    var readerData = null;
-    var giveTheBook = function (client, data = new Date().toLocaleString()) {
+
+function LibraryBook(title, year, author) {
+    let title = title,
+        year = year,
+        author = author,
+        readerName = '',
+        readerData = '';
+    let giveTheBook = function (client, data = new Date().toLocaleString()) {
         readerName = client;
         readerData = data
     };
     this.getBookInfo = function () {
-        var text = readerName ? 'Already taken' : 'You can take it';
+        let text = readerName ? null : 'Take it';
         console.info(`${author}, ${title} (${year}): ${text}`)
     };
     this.getTheBook = function (client, data) {
@@ -45,8 +46,9 @@ function LibraryBook(_title = 'Some interesting book', _year = 'No info', _autho
     }
 }
 
-var book = new LibraryBook('World of Warcraft', '2016', 'William King');
-book.getTheBook('John Doe', new Date(2018, 6, 25));
+let book = new LibraryBook();
+book.getTheBook('Bridge to Terabithia', new Date(2019, 1, 1));
+
 
 // third
 function Constr() {
@@ -57,3 +59,5 @@ function Constr() {
 
 var test = new Constr();
 test.addProperty('fruit', 'strawberry');
+
+//////////////
