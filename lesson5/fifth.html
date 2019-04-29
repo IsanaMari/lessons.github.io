@@ -16,10 +16,65 @@
 </div>
 <div id="first">
   <p>Задача 1</p>
+  <p>Напилить код функции modificator, такой, чтобы в результате работы кода в консоли было:
+    sampleFunc: test | sample</p>
+  <xmp>
+    function sampleFunc() {
+      console.log(`${arguments.callee.name}: ${arguments[0]} | ${arguments[1]}`)
+    }
+
+    function modificator(func) {
+      return func.bind(null, 'test', 'sample')
+    }
+
+    testFunc = modificator(sampleFunc);
+
+    testFunc();
+  </xmp>
 </div>
 <div id="second">
   <p>Задача 2</p>
+  <p>Напилить код функции modificator, такой, чтобы в результате работы кода в консоль было выведено число символов в
+    коде функции sampleFunc</p>
+  <xmp>
+    function sampleFunc2() {
+      console.info(`Symbols in my code: ${arguments.callee + 0}`)
+    }
 
+    function modificator2(func) {
+      func.valueOf = function () {
+        return func.toString().length
+      }
+    }
+
+    modificator2(sampleFunc2);
+
+    sampleFunc2();
+  </xmp>
+</div>
+<div>
+  <p>Задача 3</p>
+  <p>Напилите код функции generateError, такой, чтобы в результате работы кода в консоли было сообщение от ошибке:
+    ► Application: Invalid arguments
+    Function needs 3 arguments, but only 1 present</p>
+  <xmp>
+    function testArguments() {
+      function generateError(numArgs) {
+        var err = new Error('Invalid arguments');
+        err.name = 'Application';
+        err.stack = `Function needs 3 arguments, but only ${numArgs} present`;
+        throw err
+      }
+
+      try {
+        arguments.length >= 3 ? null : generateError(arguments.length)
+      } catch (err) {
+        console.error(`${err.name}: ${err.message}\n${err.stack}`)
+      }
+    }
+
+    testArguments("Google");
+  </xmp>
 </div>
 
 <!-- scripts -->
