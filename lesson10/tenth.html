@@ -54,7 +54,32 @@
 </div>
 <div>
   <p>Задача 2</p>
-  <p></p>
+  <p>Допилите код конструктора User, дополнив его акцессорами приватного свойства presence так, чтобы после выполнения
+    скрипта
+    в консоли было:
+    <b>"Ivan is absent"</b>
+    а после выполнения кода:
+    <b>user.presence = "+"
+      console.info ( user.presence )</b>
+    в консоли было:
+    <b>"Ivan is present"</b></p>
+  <pre>
+    function User(name) {
+      this.name = name;
+      var presence = false;
+      Object.defineProperty(this, "presence", {
+        get: () =>
+          presence ? `${this.name} is present` : `${this.name} is absent`,
+        set: value =>
+          presence = value
+      })
+    }
+
+  let user = new User("Ivan");
+  console.info(user.presence);
+  user.presence = '+';
+  console.info(user.presence);
+  </pre>
 </div>
 
 <!-- scripts -->
